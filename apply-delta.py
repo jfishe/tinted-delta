@@ -21,12 +21,16 @@ DEFAULT_DEST = "~/.config/delta/tinty.gitconfig"
 # Fraction of red/green mixed into the background. Lowered (down to MIN_MIX)
 # when the scheme foreground would fall below MIN_CONTRAST, or below
 # KEEP_CONTRAST of its contrast on the plain background if that is lower.
+# Changed words may drop to EMPH_RELAX of that target, and always get at least
+# EMPH_GAP more red/green than the line, so they stand out.
 LINE = 0.20
 EMPH = 0.40
 MIN_MIX = 0.08
 STEP = 0.02
 MIN_CONTRAST = 4.5
 KEEP_CONTRAST = 0.8
+EMPH_RELAX = 0.75
+EMPH_GAP = 0.12
 
 VARS_RE = re.compile(r"^;\s*tinted-delta-vars:(.*)$", re.MULTILINE)
 HEX_RE = re.compile(r"#?([0-9a-fA-F]{6})")
@@ -71,22 +75,24 @@ def contrast(a, b):
     return (hi + 0.05) / (lo + 0.05)
 
 
-def tint(bg, accent, t, fg=None):
-    """Mix accent into bg, backing off t while fg would become hard to read."""
-    if fg is None:
-        return mix(bg, accent, t)
-    need = min(MIN_CONTRAST, KEEP_CONTRAST * contrast(fg, bg))
+def fit(bg, accent, t, fg, need):
+    """Largest mix <= t (but >= MIN_MIX) keeping fg at contrast >= need."""
     while t > MIN_MIX and contrast(fg, mix(bg, accent, t)) < need:
         t = max(MIN_MIX, t - STEP)
-    return mix(bg, accent, t)
+    return t
 
 
 def styles(v):
     bg, fg = v["bg"], v.get("fg")
+    need = min(MIN_CONTRAST, KEEP_CONTRAST * contrast(fg, bg)) if fg else 0
     out = {}
     for side, accent in (("minus", v["red"]), ("plus", v["green"])):
-        line = tint(bg, accent, LINE, fg)
-        emph = tint(bg, accent, EMPH, fg)
+        line_t, emph_t = LINE, EMPH
+        if fg:
+            line_t = fit(bg, accent, LINE, fg, need)
+            emph_t = fit(bg, accent, EMPH, fg, need * EMPH_RELAX)
+            emph_t = max(emph_t, min(EMPH, line_t + EMPH_GAP))
+        line, emph = mix(bg, accent, line_t), mix(bg, accent, emph_t)
         out[f"{side}-style"] = f'syntax "#{line}"'
         out[f"{side}-non-emph-style"] = f'syntax "#{line}"'
         out[f"{side}-emph-style"] = f'syntax "#{emph}"'
