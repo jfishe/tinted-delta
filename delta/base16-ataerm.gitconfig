@@ -1,0 +1,33 @@
+; tinted-delta: Aftertaerm (base16-ataerm)
+; Scheme author: Radek Polasek (https://github.com/radekp31), based on Taerminal by cozywigwam
+; Template: https://github.com/jfishe/tinted-delta
+;
+; Include from ~/.gitconfig:  [include] path = ~/.config/delta/tinty.gitconfig
+; apply-delta.py (the tinty hook) replaces the four plus/minus styles with
+; backgrounds blended from these colors:
+; tinted-delta-vars: fg=#f0f0f0 bg=#26282a red=#ff8878 green=#b4fb73
+[delta]
+	dark = true
+	true-color = always
+	syntax-theme = ansi
+	minus-style = red
+	minus-emph-style = bold red "#3c3e41"
+	plus-style = green
+	plus-emph-style = bold green "#3c3e41"
+	minus-empty-line-marker-style = normal "#ff8878"
+	plus-empty-line-marker-style = normal "#b4fb73"
+	line-numbers-minus-style = "#ff8878"
+	line-numbers-plus-style = "#b4fb73"
+	line-numbers-zero-style = "#6f6f6f"
+	line-numbers-left-style = "#6f6f6f"
+	line-numbers-right-style = "#6f6f6f"
+	file-style = bold "#8bbce5"
+	file-decoration-style = "#8bbce5" ul
+	hunk-header-style = file line-number syntax
+	hunk-header-decoration-style = "#6f6f6f" box
+	hunk-header-file-style = "#ffb2fe"
+	hunk-header-line-number-style = "#fffcb7"
+	commit-style = raw
+	commit-decoration-style = "#fffcb7" box
+	blame-palette = "#26282a #303234"
+	map-styles = bold purple => syntax "#3c3e41", bold cyan => syntax "#303234"

@@ -9,7 +9,7 @@
 [delta]
 	dark = true
 	true-color = always
-	syntax-theme = base16
+	syntax-theme = ansi
 	minus-style = red
 	minus-emph-style = bold red "#3a2e1c"
 	plus-style = green

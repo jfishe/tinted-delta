@@ -8,8 +8,11 @@ Each built file sets:
 
 - `dark`/`light` from the scheme variant, so delta does not have to guess the
   terminal background.
-- `syntax-theme = base16`: syntax colors come from the terminal's ANSI palette,
-  which tinted-shell / tinted-windows-terminal set from the same scheme.
+- `syntax-theme = ansi`: syntax colors come from the terminal's ANSI palette,
+  which tinted-shell / tinted-windows-terminal set from the same scheme, and
+  plain text uses the terminal's default foreground. (The `base16` theme draws
+  plain text in ANSI 7, which is unreadable on light schemes whose ANSI 7 is a
+  true white, e.g. tinted8.)
 - `true-color = always`, so the hex colors are not rounded to the
   xterm-256 palette. (`COLORTERM` is often unset in WSL.)
 - Added and removed lines get backgrounds blended from the scheme background and
