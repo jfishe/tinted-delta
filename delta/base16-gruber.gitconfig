@@ -1,0 +1,33 @@
+; tinted-delta: Gruber (base16-gruber)
+; Scheme author: Patel, Nimai &lt;nimai.m.patel@gmail.com&gt;, colors from www.github.com/rexim/gruber-darker-theme
+; Template: https://github.com/jfishe/tinted-delta
+;
+; Include from ~/.gitconfig:  [include] path = ~/.config/delta/tinty.gitconfig
+; apply-delta.py (the tinty hook) replaces the four plus/minus styles with
+; backgrounds blended from these colors:
+; tinted-delta-vars: fg=#f4f4ff bg=#181818 red=#f43841 green=#73c936
+[delta]
+	dark = true
+	true-color = always
+	syntax-theme = base16
+	minus-style = red
+	minus-emph-style = bold red "#484848"
+	plus-style = green
+	plus-emph-style = bold green "#484848"
+	minus-empty-line-marker-style = normal "#f43841"
+	plus-empty-line-marker-style = normal "#73c936"
+	line-numbers-minus-style = "#f43841"
+	line-numbers-plus-style = "#73c936"
+	line-numbers-zero-style = "#52494e"
+	line-numbers-left-style = "#52494e"
+	line-numbers-right-style = "#52494e"
+	file-style = bold "#96a6c8"
+	file-decoration-style = "#96a6c8" ul
+	hunk-header-style = file line-number syntax
+	hunk-header-decoration-style = "#52494e" box
+	hunk-header-file-style = "#9e95c7"
+	hunk-header-line-number-style = "#ffdd33"
+	commit-style = raw
+	commit-decoration-style = "#ffdd33" box
+	blame-palette = "#181818 #453d41"
+	map-styles = bold purple => syntax "#484848", bold cyan => syntax "#453d41"

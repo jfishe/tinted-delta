@@ -1,0 +1,33 @@
+; tinted-delta: Nord Light (base16-nord-light)
+; Scheme author: threddast, based on fuxialexander&#39;s doom-nord-light-theme (Doom Emacs)
+; Template: https://github.com/jfishe/tinted-delta
+;
+; Include from ~/.gitconfig:  [include] path = ~/.config/delta/tinty.gitconfig
+; apply-delta.py (the tinty hook) replaces the four plus/minus styles with
+; backgrounds blended from these colors:
+; tinted-delta-vars: fg=#2e3440 bg=#e5e9f0 red=#99324b green=#4f894c
+[delta]
+	light = true
+	true-color = always
+	syntax-theme = base16
+	minus-style = red
+	minus-emph-style = bold red "#b8c5db"
+	plus-style = green
+	plus-emph-style = bold green "#b8c5db"
+	minus-empty-line-marker-style = normal "#99324b"
+	plus-empty-line-marker-style = normal "#4f894c"
+	line-numbers-minus-style = "#99324b"
+	line-numbers-plus-style = "#4f894c"
+	line-numbers-zero-style = "#aebacf"
+	line-numbers-left-style = "#aebacf"
+	line-numbers-right-style = "#aebacf"
+	file-style = bold "#3b6ea8"
+	file-decoration-style = "#3b6ea8" ul
+	hunk-header-style = file line-number syntax
+	hunk-header-decoration-style = "#aebacf" box
+	hunk-header-file-style = "#97365b"
+	hunk-header-line-number-style = "#9a7500"
+	commit-style = raw
+	commit-decoration-style = "#9a7500" box
+	blame-palette = "#e5e9f0 #c2d0e7"
+	map-styles = bold purple => syntax "#b8c5db", bold cyan => syntax "#c2d0e7"

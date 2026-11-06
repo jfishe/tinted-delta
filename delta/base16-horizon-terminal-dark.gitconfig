@@ -1,0 +1,33 @@
+; tinted-delta: Horizon Terminal Dark (base16-horizon-terminal-dark)
+; Scheme author: Michaël Ball (http://github.com/michael-ball/)
+; Template: https://github.com/jfishe/tinted-delta
+;
+; Include from ~/.gitconfig:  [include] path = ~/.config/delta/tinty.gitconfig
+; apply-delta.py (the tinty hook) replaces the four plus/minus styles with
+; backgrounds blended from these colors:
+; tinted-delta-vars: fg=#cbced0 bg=#1c1e26 red=#e95678 green=#29d398
+[delta]
+	dark = true
+	true-color = always
+	syntax-theme = base16
+	minus-style = red
+	minus-emph-style = bold red "#2e303e"
+	plus-style = green
+	plus-emph-style = bold green "#2e303e"
+	minus-empty-line-marker-style = normal "#e95678"
+	plus-empty-line-marker-style = normal "#29d398"
+	line-numbers-minus-style = "#e95678"
+	line-numbers-plus-style = "#29d398"
+	line-numbers-zero-style = "#6f6f70"
+	line-numbers-left-style = "#6f6f70"
+	line-numbers-right-style = "#6f6f70"
+	file-style = bold "#26bbd9"
+	file-decoration-style = "#26bbd9" ul
+	hunk-header-style = file line-number syntax
+	hunk-header-decoration-style = "#6f6f70" box
+	hunk-header-file-style = "#ee64ac"
+	hunk-header-line-number-style = "#fac29a"
+	commit-style = raw
+	commit-decoration-style = "#fac29a" box
+	blame-palette = "#1c1e26 #232530"
+	map-styles = bold purple => syntax "#2e303e", bold cyan => syntax "#232530"

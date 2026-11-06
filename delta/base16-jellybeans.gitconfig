@@ -1,0 +1,33 @@
+; tinted-delta: Jellybeans (base16-jellybeans)
+; Scheme author: FredHappyface (https://github.com/fredHappyface), converted to Base16 by https://github.com/nonetrix
+; Template: https://github.com/jfishe/tinted-delta
+;
+; Include from ~/.gitconfig:  [include] path = ~/.config/delta/tinty.gitconfig
+; apply-delta.py (the tinty hook) replaces the four plus/minus styles with
+; backgrounds blended from these colors:
+; tinted-delta-vars: fg=#d5d5d5 bg=#121212 red=#ffa1a1 green=#bddeab
+[delta]
+	dark = true
+	true-color = always
+	syntax-theme = base16
+	minus-style = red
+	minus-emph-style = bold red "#bdbdbd"
+	plus-style = green
+	plus-emph-style = bold green "#bdbdbd"
+	minus-empty-line-marker-style = normal "#ffa1a1"
+	plus-empty-line-marker-style = normal "#bddeab"
+	line-numbers-minus-style = "#ffa1a1"
+	line-numbers-plus-style = "#bddeab"
+	line-numbers-zero-style = "#c5c5c5"
+	line-numbers-left-style = "#c5c5c5"
+	line-numbers-right-style = "#c5c5c5"
+	file-style = bold "#b1d8f6"
+	file-decoration-style = "#b1d8f6" ul
+	hunk-header-style = file line-number syntax
+	hunk-header-decoration-style = "#c5c5c5" box
+	hunk-header-file-style = "#fbdaff"
+	hunk-header-line-number-style = "#ffdca0"
+	commit-style = raw
+	commit-decoration-style = "#ffdca0" box
+	blame-palette = "#121212 #929292"
+	map-styles = bold purple => syntax "#bdbdbd", bold cyan => syntax "#929292"

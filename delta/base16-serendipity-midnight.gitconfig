@@ -1,0 +1,33 @@
+; tinted-delta: Serendipity Midnight (base16-serendipity-midnight)
+; Scheme author: Micheal Andreuzza (https://michaelandreuzza.com/)
+; Template: https://github.com/jfishe/tinted-delta
+;
+; Include from ~/.gitconfig:  [include] path = ~/.config/delta/tinty.gitconfig
+; apply-delta.py (the tinty hook) replaces the four plus/minus styles with
+; backgrounds blended from these colors:
+; tinted-delta-vars: fg=#dee0ef bg=#151726 red=#ee8679 green=#5ba2d0
+[delta]
+	dark = true
+	true-color = always
+	syntax-theme = base16
+	minus-style = red
+	minus-emph-style = bold red "#1c1e2d"
+	plus-style = green
+	plus-emph-style = bold green "#1c1e2d"
+	minus-empty-line-marker-style = normal "#ee8679"
+	plus-empty-line-marker-style = normal "#5ba2d0"
+	line-numbers-minus-style = "#ee8679"
+	line-numbers-plus-style = "#5ba2d0"
+	line-numbers-zero-style = "#6b6d7c"
+	line-numbers-left-style = "#6b6d7c"
+	line-numbers-right-style = "#6b6d7c"
+	file-style = bold "#94b8ff"
+	file-decoration-style = "#94b8ff" ul
+	hunk-header-style = file line-number syntax
+	hunk-header-decoration-style = "#6b6d7c" box
+	hunk-header-file-style = "#a78bfa"
+	hunk-header-line-number-style = "#a78bfa"
+	commit-style = raw
+	commit-decoration-style = "#a78bfa" box
+	blame-palette = "#151726 #1c1e2d"
+	map-styles = bold purple => syntax "#1c1e2d", bold cyan => syntax "#1c1e2d"

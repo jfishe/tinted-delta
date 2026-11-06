@@ -1,0 +1,33 @@
+; tinted-delta: Snazzy (base16-snazzy)
+; Scheme author: Chawye Hsu (https://github.com/chawyehsu), based on Hyper Snazzy Theme (https://github.com/sindresorhus/hyper-snazzy)
+; Template: https://github.com/jfishe/tinted-delta
+;
+; Include from ~/.gitconfig:  [include] path = ~/.config/delta/tinty.gitconfig
+; apply-delta.py (the tinty hook) replaces the four plus/minus styles with
+; backgrounds blended from these colors:
+; tinted-delta-vars: fg=#e2e4e5 bg=#282a36 red=#ff5c57 green=#5af78e
+[delta]
+	dark = true
+	true-color = always
+	syntax-theme = base16
+	minus-style = red
+	minus-emph-style = bold red "#43454f"
+	plus-style = green
+	plus-emph-style = bold green "#43454f"
+	minus-empty-line-marker-style = normal "#ff5c57"
+	plus-empty-line-marker-style = normal "#5af78e"
+	line-numbers-minus-style = "#ff5c57"
+	line-numbers-plus-style = "#5af78e"
+	line-numbers-zero-style = "#78787e"
+	line-numbers-left-style = "#78787e"
+	line-numbers-right-style = "#78787e"
+	file-style = bold "#57c7ff"
+	file-decoration-style = "#57c7ff" ul
+	hunk-header-style = file line-number syntax
+	hunk-header-decoration-style = "#78787e" box
+	hunk-header-file-style = "#ff6ac1"
+	hunk-header-line-number-style = "#f3f99d"
+	commit-style = raw
+	commit-decoration-style = "#f3f99d" box
+	blame-palette = "#282a36 #34353e"
+	map-styles = bold purple => syntax "#43454f", bold cyan => syntax "#34353e"

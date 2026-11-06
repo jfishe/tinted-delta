@@ -1,0 +1,33 @@
+; tinted-delta: Tokyo Night Moon (base16-tokyo-night-moon)
+; Scheme author: Ólafur Bjarki Bogason
+; Template: https://github.com/jfishe/tinted-delta
+;
+; Include from ~/.gitconfig:  [include] path = ~/.config/delta/tinty.gitconfig
+; apply-delta.py (the tinty hook) replaces the four plus/minus styles with
+; backgrounds blended from these colors:
+; tinted-delta-vars: fg=#828bb8 bg=#222436 red=#ff757f green=#c3e88d
+[delta]
+	dark = true
+	true-color = always
+	syntax-theme = base16
+	minus-style = red
+	minus-emph-style = bold red "#2d3f76"
+	plus-style = green
+	plus-emph-style = bold green "#2d3f76"
+	minus-empty-line-marker-style = normal "#ff757f"
+	plus-empty-line-marker-style = normal "#c3e88d"
+	line-numbers-minus-style = "#ff757f"
+	line-numbers-plus-style = "#c3e88d"
+	line-numbers-zero-style = "#3b4261"
+	line-numbers-left-style = "#3b4261"
+	line-numbers-right-style = "#3b4261"
+	file-style = bold "#82aaff"
+	file-decoration-style = "#82aaff" ul
+	hunk-header-style = file line-number syntax
+	hunk-header-decoration-style = "#3b4261" box
+	hunk-header-file-style = "#fca7ea"
+	hunk-header-line-number-style = "#ffdf77"
+	commit-style = raw
+	commit-decoration-style = "#ffdf77" box
+	blame-palette = "#222436 #1e2030"
+	map-styles = bold purple => syntax "#2d3f76", bold cyan => syntax "#1e2030"

@@ -1,0 +1,33 @@
+; tinted-delta: tender (base16-tender)
+; Scheme author: Jacobo Tabernero (https://github/com/jacoborus/tender.vim)
+; Template: https://github.com/jfishe/tinted-delta
+;
+; Include from ~/.gitconfig:  [include] path = ~/.config/delta/tinty.gitconfig
+; apply-delta.py (the tinty hook) replaces the four plus/minus styles with
+; backgrounds blended from these colors:
+; tinted-delta-vars: fg=#eeeeee bg=#282828 red=#f43753 green=#c9d05c
+[delta]
+	dark = true
+	true-color = always
+	syntax-theme = base16
+	minus-style = red
+	minus-emph-style = bold red "#484848"
+	plus-style = green
+	plus-emph-style = bold green "#484848"
+	minus-empty-line-marker-style = normal "#f43753"
+	plus-empty-line-marker-style = normal "#c9d05c"
+	line-numbers-minus-style = "#f43753"
+	line-numbers-plus-style = "#c9d05c"
+	line-numbers-zero-style = "#4c4c4c"
+	line-numbers-left-style = "#4c4c4c"
+	line-numbers-right-style = "#4c4c4c"
+	file-style = bold "#b3deef"
+	file-decoration-style = "#b3deef" ul
+	hunk-header-style = file line-number syntax
+	hunk-header-decoration-style = "#4c4c4c" box
+	hunk-header-file-style = "#d3b987"
+	hunk-header-line-number-style = "#ffc24b"
+	commit-style = raw
+	commit-decoration-style = "#ffc24b" box
+	blame-palette = "#282828 #383838"
+	map-styles = bold purple => syntax "#484848", bold cyan => syntax "#383838"

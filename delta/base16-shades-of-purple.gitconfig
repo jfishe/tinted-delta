@@ -1,0 +1,33 @@
+; tinted-delta: Shades of Purple (base16-shades-of-purple)
+; Scheme author: Iolar Demartini Junior (http://github.com/demartini), based on Shades of Purple Theme (https://github.com/ahmadawais/shades-of-purple-vscode)
+; Template: https://github.com/jfishe/tinted-delta
+;
+; Include from ~/.gitconfig:  [include] path = ~/.config/delta/tinty.gitconfig
+; apply-delta.py (the tinty hook) replaces the four plus/minus styles with
+; backgrounds blended from these colors:
+; tinted-delta-vars: fg=#c7c7c7 bg=#1e1e3f red=#d90429 green=#3ad900
+[delta]
+	dark = true
+	true-color = always
+	syntax-theme = base16
+	minus-style = red
+	minus-emph-style = bold red "#f1d000"
+	plus-style = green
+	plus-emph-style = bold green "#f1d000"
+	minus-empty-line-marker-style = normal "#d90429"
+	plus-empty-line-marker-style = normal "#3ad900"
+	line-numbers-minus-style = "#d90429"
+	line-numbers-plus-style = "#3ad900"
+	line-numbers-zero-style = "#808080"
+	line-numbers-left-style = "#808080"
+	line-numbers-right-style = "#808080"
+	file-style = bold "#6943ff"
+	file-decoration-style = "#6943ff" ul
+	hunk-header-style = file line-number syntax
+	hunk-header-decoration-style = "#808080" box
+	hunk-header-file-style = "#ff2c70"
+	hunk-header-line-number-style = "#ffe700"
+	commit-style = raw
+	commit-decoration-style = "#ffe700" box
+	blame-palette = "#1e1e3f #43d426"
+	map-styles = bold purple => syntax "#f1d000", bold cyan => syntax "#43d426"

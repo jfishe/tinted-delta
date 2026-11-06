@@ -1,0 +1,33 @@
+; tinted-delta: Green Screen (base16-greenscreen)
+; Scheme author: Chris Kempson (http://chriskempson.com)
+; Template: https://github.com/jfishe/tinted-delta
+;
+; Include from ~/.gitconfig:  [include] path = ~/.config/delta/tinty.gitconfig
+; apply-delta.py (the tinty hook) replaces the four plus/minus styles with
+; backgrounds blended from these colors:
+; tinted-delta-vars: fg=#00bb00 bg=#001100 red=#007700 green=#00bb00
+[delta]
+	dark = true
+	true-color = always
+	syntax-theme = base16
+	minus-style = red
+	minus-emph-style = bold red "#005500"
+	plus-style = green
+	plus-emph-style = bold green "#005500"
+	minus-empty-line-marker-style = normal "#007700"
+	plus-empty-line-marker-style = normal "#00bb00"
+	line-numbers-minus-style = "#007700"
+	line-numbers-plus-style = "#00bb00"
+	line-numbers-zero-style = "#007700"
+	line-numbers-left-style = "#007700"
+	line-numbers-right-style = "#007700"
+	file-style = bold "#009900"
+	file-decoration-style = "#009900" ul
+	hunk-header-style = file line-number syntax
+	hunk-header-decoration-style = "#007700" box
+	hunk-header-file-style = "#00bb00"
+	hunk-header-line-number-style = "#007700"
+	commit-style = raw
+	commit-decoration-style = "#007700" box
+	blame-palette = "#001100 #003300"
+	map-styles = bold purple => syntax "#005500", bold cyan => syntax "#003300"

@@ -1,0 +1,33 @@
+; tinted-delta: Tango (base16-tango)
+; Scheme author: @Schnouki, based on the Tango Desktop Project
+; Template: https://github.com/jfishe/tinted-delta
+;
+; Include from ~/.gitconfig:  [include] path = ~/.config/delta/tinty.gitconfig
+; apply-delta.py (the tinty hook) replaces the four plus/minus styles with
+; backgrounds blended from these colors:
+; tinted-delta-vars: fg=#d3d7cf bg=#2e3436 red=#cc0000 green=#4e9a06
+[delta]
+	dark = true
+	true-color = always
+	syntax-theme = base16
+	minus-style = red
+	minus-emph-style = bold red "#fce94f"
+	plus-style = green
+	plus-emph-style = bold green "#fce94f"
+	minus-empty-line-marker-style = normal "#cc0000"
+	plus-empty-line-marker-style = normal "#4e9a06"
+	line-numbers-minus-style = "#cc0000"
+	line-numbers-plus-style = "#4e9a06"
+	line-numbers-zero-style = "#555753"
+	line-numbers-left-style = "#555753"
+	line-numbers-right-style = "#555753"
+	file-style = bold "#3465a4"
+	file-decoration-style = "#3465a4" ul
+	hunk-header-style = file line-number syntax
+	hunk-header-decoration-style = "#555753" box
+	hunk-header-file-style = "#75507b"
+	hunk-header-line-number-style = "#c4a000"
+	commit-style = raw
+	commit-decoration-style = "#c4a000" box
+	blame-palette = "#2e3436 #8ae234"
+	map-styles = bold purple => syntax "#fce94f", bold cyan => syntax "#8ae234"

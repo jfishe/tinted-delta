@@ -1,0 +1,33 @@
+; tinted-delta: Gruvbox light, soft (base16-gruvbox-light-soft)
+; Scheme author: Dawid Kurek (dawikur@gmail.com), morhetz (https://github.com/morhetz/gruvbox)
+; Template: https://github.com/jfishe/tinted-delta
+;
+; Include from ~/.gitconfig:  [include] path = ~/.config/delta/tinty.gitconfig
+; apply-delta.py (the tinty hook) replaces the four plus/minus styles with
+; backgrounds blended from these colors:
+; tinted-delta-vars: fg=#504945 bg=#f2e5bc red=#9d0006 green=#79740e
+[delta]
+	light = true
+	true-color = always
+	syntax-theme = base16
+	minus-style = red
+	minus-emph-style = bold red "#d5c4a1"
+	plus-style = green
+	plus-emph-style = bold green "#d5c4a1"
+	minus-empty-line-marker-style = normal "#9d0006"
+	plus-empty-line-marker-style = normal "#79740e"
+	line-numbers-minus-style = "#9d0006"
+	line-numbers-plus-style = "#79740e"
+	line-numbers-zero-style = "#bdae93"
+	line-numbers-left-style = "#bdae93"
+	line-numbers-right-style = "#bdae93"
+	file-style = bold "#076678"
+	file-decoration-style = "#076678" ul
+	hunk-header-style = file line-number syntax
+	hunk-header-decoration-style = "#bdae93" box
+	hunk-header-file-style = "#8f3f71"
+	hunk-header-line-number-style = "#b57614"
+	commit-style = raw
+	commit-decoration-style = "#b57614" box
+	blame-palette = "#f2e5bc #ebdbb2"
+	map-styles = bold purple => syntax "#d5c4a1", bold cyan => syntax "#ebdbb2"

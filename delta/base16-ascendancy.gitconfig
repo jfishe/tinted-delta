@@ -1,0 +1,33 @@
+; tinted-delta: Ascendancy (base16-ascendancy)
+; Scheme author: EmergentMind (https://github.com/emergentmind/ascendancy-scheme)
+; Template: https://github.com/jfishe/tinted-delta
+;
+; Include from ~/.gitconfig:  [include] path = ~/.config/delta/tinty.gitconfig
+; apply-delta.py (the tinty hook) replaces the four plus/minus styles with
+; backgrounds blended from these colors:
+; tinted-delta-vars: fg=#d5c7a1 bg=#282828 red=#d05000 green=#b8bb26
+[delta]
+	dark = true
+	true-color = always
+	syntax-theme = base16
+	minus-style = red
+	minus-emph-style = bold red "#504945"
+	plus-style = green
+	plus-emph-style = bold green "#504945"
+	minus-empty-line-marker-style = normal "#d05000"
+	plus-empty-line-marker-style = normal "#b8bb26"
+	line-numbers-minus-style = "#d05000"
+	line-numbers-plus-style = "#b8bb26"
+	line-numbers-zero-style = "#928374"
+	line-numbers-left-style = "#928374"
+	line-numbers-right-style = "#928374"
+	file-style = bold "#458588"
+	file-decoration-style = "#458588" ul
+	hunk-header-style = file line-number syntax
+	hunk-header-decoration-style = "#928374" box
+	hunk-header-file-style = "#fabd2f"
+	hunk-header-line-number-style = "#ffcc1b"
+	commit-style = raw
+	commit-decoration-style = "#ffcc1b" box
+	blame-palette = "#282828 #212f3d"
+	map-styles = bold purple => syntax "#504945", bold cyan => syntax "#212f3d"

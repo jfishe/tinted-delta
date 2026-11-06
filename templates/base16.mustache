@@ -1,0 +1,33 @@
+; tinted-delta: {{scheme-name}} ({{scheme-system}}-{{scheme-slug}})
+; Scheme author: {{scheme-author}}
+; Template: https://github.com/jfishe/tinted-delta
+;
+; Include from ~/.gitconfig:  [include] path = ~/.config/delta/tinty.gitconfig
+; apply-delta.py (the tinty hook) replaces the four plus/minus styles with
+; backgrounds blended from these colors:
+; tinted-delta-vars: fg=#{{base05-hex}} bg=#{{base00-hex}} red=#{{base08-hex}} green=#{{base0B-hex}}
+[delta]
+	{{scheme-variant}} = true
+	true-color = always
+	syntax-theme = base16
+	minus-style = red
+	minus-emph-style = bold red "#{{base02-hex}}"
+	plus-style = green
+	plus-emph-style = bold green "#{{base02-hex}}"
+	minus-empty-line-marker-style = normal "#{{base08-hex}}"
+	plus-empty-line-marker-style = normal "#{{base0B-hex}}"
+	line-numbers-minus-style = "#{{base08-hex}}"
+	line-numbers-plus-style = "#{{base0B-hex}}"
+	line-numbers-zero-style = "#{{base03-hex}}"
+	line-numbers-left-style = "#{{base03-hex}}"
+	line-numbers-right-style = "#{{base03-hex}}"
+	file-style = bold "#{{base0D-hex}}"
+	file-decoration-style = "#{{base0D-hex}}" ul
+	hunk-header-style = file line-number syntax
+	hunk-header-decoration-style = "#{{base03-hex}}" box
+	hunk-header-file-style = "#{{base0E-hex}}"
+	hunk-header-line-number-style = "#{{base0A-hex}}"
+	commit-style = raw
+	commit-decoration-style = "#{{base0A-hex}}" box
+	blame-palette = "#{{base00-hex}} #{{base01-hex}}"
+	map-styles = bold purple => syntax "#{{base02-hex}}", bold cyan => syntax "#{{base01-hex}}"

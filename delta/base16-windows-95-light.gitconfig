@@ -1,0 +1,33 @@
+; tinted-delta: Windows 95 Light (base16-windows-95-light)
+; Scheme author: Fergus Collins (https://github.com/ferguscollins)
+; Template: https://github.com/jfishe/tinted-delta
+;
+; Include from ~/.gitconfig:  [include] path = ~/.config/delta/tinty.gitconfig
+; apply-delta.py (the tinty hook) replaces the four plus/minus styles with
+; backgrounds blended from these colors:
+; tinted-delta-vars: fg=#545454 bg=#fcfcfc red=#a80000 green=#00a800
+[delta]
+	light = true
+	true-color = always
+	syntax-theme = base16
+	minus-style = red
+	minus-emph-style = bold red "#c4c4c4"
+	plus-style = green
+	plus-emph-style = bold green "#c4c4c4"
+	minus-empty-line-marker-style = normal "#a80000"
+	plus-empty-line-marker-style = normal "#00a800"
+	line-numbers-minus-style = "#a80000"
+	line-numbers-plus-style = "#00a800"
+	line-numbers-zero-style = "#a8a8a8"
+	line-numbers-left-style = "#a8a8a8"
+	line-numbers-right-style = "#a8a8a8"
+	file-style = bold "#0000a8"
+	file-decoration-style = "#0000a8" ul
+	hunk-header-style = file line-number syntax
+	hunk-header-decoration-style = "#a8a8a8" box
+	hunk-header-file-style = "#a800a8"
+	hunk-header-line-number-style = "#a85400"
+	commit-style = raw
+	commit-decoration-style = "#a85400" box
+	blame-palette = "#fcfcfc #e0e0e0"
+	map-styles = bold purple => syntax "#c4c4c4", bold cyan => syntax "#e0e0e0"

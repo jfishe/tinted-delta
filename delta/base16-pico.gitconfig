@@ -1,0 +1,33 @@
+; tinted-delta: Pico (base16-pico)
+; Scheme author: PICO-8 (http://www.lexaloffle.com/pico-8.php)
+; Template: https://github.com/jfishe/tinted-delta
+;
+; Include from ~/.gitconfig:  [include] path = ~/.config/delta/tinty.gitconfig
+; apply-delta.py (the tinty hook) replaces the four plus/minus styles with
+; backgrounds blended from these colors:
+; tinted-delta-vars: fg=#5f574f bg=#000000 red=#ff004d green=#00e756
+[delta]
+	dark = true
+	true-color = always
+	syntax-theme = base16
+	minus-style = red
+	minus-emph-style = bold red "#7e2553"
+	plus-style = green
+	plus-emph-style = bold green "#7e2553"
+	minus-empty-line-marker-style = normal "#ff004d"
+	plus-empty-line-marker-style = normal "#00e756"
+	line-numbers-minus-style = "#ff004d"
+	line-numbers-plus-style = "#00e756"
+	line-numbers-zero-style = "#008751"
+	line-numbers-left-style = "#008751"
+	line-numbers-right-style = "#008751"
+	file-style = bold "#83769c"
+	file-decoration-style = "#83769c" ul
+	hunk-header-style = file line-number syntax
+	hunk-header-decoration-style = "#008751" box
+	hunk-header-file-style = "#ff77a8"
+	hunk-header-line-number-style = "#fff024"
+	commit-style = raw
+	commit-decoration-style = "#fff024" box
+	blame-palette = "#000000 #1d2b53"
+	map-styles = bold purple => syntax "#7e2553", bold cyan => syntax "#1d2b53"

@@ -1,0 +1,33 @@
+; tinted-delta: Atelier Seaside Light (base16-atelier-seaside-light)
+; Scheme author: Bram de Haan (http://atelierbramdehaan.nl)
+; Template: https://github.com/jfishe/tinted-delta
+;
+; Include from ~/.gitconfig:  [include] path = ~/.config/delta/tinty.gitconfig
+; apply-delta.py (the tinty hook) replaces the four plus/minus styles with
+; backgrounds blended from these colors:
+; tinted-delta-vars: fg=#5e6e5e bg=#f4fbf4 red=#e6193c green=#29a329
+[delta]
+	light = true
+	true-color = always
+	syntax-theme = base16
+	minus-style = red
+	minus-emph-style = bold red "#8ca68c"
+	plus-style = green
+	plus-emph-style = bold green "#8ca68c"
+	minus-empty-line-marker-style = normal "#e6193c"
+	plus-empty-line-marker-style = normal "#29a329"
+	line-numbers-minus-style = "#e6193c"
+	line-numbers-plus-style = "#29a329"
+	line-numbers-zero-style = "#809980"
+	line-numbers-left-style = "#809980"
+	line-numbers-right-style = "#809980"
+	file-style = bold "#3d62f5"
+	file-decoration-style = "#3d62f5" ul
+	hunk-header-style = file line-number syntax
+	hunk-header-decoration-style = "#809980" box
+	hunk-header-file-style = "#ad2bee"
+	hunk-header-line-number-style = "#98981b"
+	commit-style = raw
+	commit-decoration-style = "#98981b" box
+	blame-palette = "#f4fbf4 #cfe8cf"
+	map-styles = bold purple => syntax "#8ca68c", bold cyan => syntax "#cfe8cf"

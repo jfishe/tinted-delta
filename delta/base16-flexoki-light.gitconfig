@@ -1,0 +1,33 @@
+; tinted-delta: Flexoki Light (base16-flexoki-light)
+; Scheme author: Steph Ango (https://github.com/kepano/flexoki)
+; Template: https://github.com/jfishe/tinted-delta
+;
+; Include from ~/.gitconfig:  [include] path = ~/.config/delta/tinty.gitconfig
+; apply-delta.py (the tinty hook) replaces the four plus/minus styles with
+; backgrounds blended from these colors:
+; tinted-delta-vars: fg=#403e3c bg=#fffcf0 red=#af3029 green=#66800b
+[delta]
+	light = true
+	true-color = always
+	syntax-theme = base16
+	minus-style = red
+	minus-emph-style = bold red "#e6e4d9"
+	plus-style = green
+	plus-emph-style = bold green "#e6e4d9"
+	minus-empty-line-marker-style = normal "#af3029"
+	plus-empty-line-marker-style = normal "#66800b"
+	line-numbers-minus-style = "#af3029"
+	line-numbers-plus-style = "#66800b"
+	line-numbers-zero-style = "#cecdc3"
+	line-numbers-left-style = "#cecdc3"
+	line-numbers-right-style = "#cecdc3"
+	file-style = bold "#205ea6"
+	file-decoration-style = "#205ea6" ul
+	hunk-header-style = file line-number syntax
+	hunk-header-decoration-style = "#cecdc3" box
+	hunk-header-file-style = "#5e409d"
+	hunk-header-line-number-style = "#ad8301"
+	commit-style = raw
+	commit-decoration-style = "#ad8301" box
+	blame-palette = "#fffcf0 #f2f0e5"
+	map-styles = bold purple => syntax "#e6e4d9", bold cyan => syntax "#f2f0e5"

@@ -1,0 +1,33 @@
+; tinted-delta: {{scheme.name}} ({{scheme.system}}-{{scheme.slug}})
+; Scheme author: {{scheme.author}}
+; Template: https://github.com/jfishe/tinted-delta
+;
+; Include from ~/.gitconfig:  [include] path = ~/.config/delta/tinty.gitconfig
+; apply-delta.py (the tinty hook) replaces the four plus/minus styles with
+; backgrounds blended from these colors:
+; tinted-delta-vars: fg=#{{ui.global.foreground.normal.hex}} bg=#{{ui.global.background.normal.hex}} red=#{{palette.red.normal.hex}} green=#{{palette.green.normal.hex}}
+[delta]
+	{{variant}} = true
+	true-color = always
+	syntax-theme = base16
+	minus-style = red
+	minus-emph-style = bold red "#{{ui.selection.background.hex}}"
+	plus-style = green
+	plus-emph-style = bold green "#{{ui.selection.background.hex}}"
+	minus-empty-line-marker-style = normal "#{{palette.red.normal.hex}}"
+	plus-empty-line-marker-style = normal "#{{palette.green.normal.hex}}"
+	line-numbers-minus-style = "#{{palette.red.normal.hex}}"
+	line-numbers-plus-style = "#{{palette.green.normal.hex}}"
+	line-numbers-zero-style = "#{{palette.gray.normal.hex}}"
+	line-numbers-left-style = "#{{palette.gray.normal.hex}}"
+	line-numbers-right-style = "#{{palette.gray.normal.hex}}"
+	file-style = bold "#{{palette.blue.normal.hex}}"
+	file-decoration-style = "#{{palette.blue.normal.hex}}" ul
+	hunk-header-style = file line-number syntax
+	hunk-header-decoration-style = "#{{palette.gray.normal.hex}}" box
+	hunk-header-file-style = "#{{palette.magenta.normal.hex}}"
+	hunk-header-line-number-style = "#{{palette.yellow.normal.hex}}"
+	commit-style = raw
+	commit-decoration-style = "#{{palette.yellow.normal.hex}}" box
+	blame-palette = "#{{ui.global.background.normal.hex}} #{{ui.global.background.dark.hex}}"
+	map-styles = bold purple => syntax "#{{ui.selection.background.hex}}", bold cyan => syntax "#{{ui.highlight.line.background.hex}}"

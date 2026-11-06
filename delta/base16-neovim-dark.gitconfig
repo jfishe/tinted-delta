@@ -1,0 +1,33 @@
+; tinted-delta: Neovim Dark (base16-neovim-dark)
+; Scheme author: https://github.com/neovim/neovim/blob/master/src/nvim/highlight_group.c
+; Template: https://github.com/jfishe/tinted-delta
+;
+; Include from ~/.gitconfig:  [include] path = ~/.config/delta/tinty.gitconfig
+; apply-delta.py (the tinty hook) replaces the four plus/minus styles with
+; backgrounds blended from these colors:
+; tinted-delta-vars: fg=#e0e2ea bg=#14161b red=#ffc0b9 green=#b3f6c0
+[delta]
+	dark = true
+	true-color = always
+	syntax-theme = base16
+	minus-style = red
+	minus-emph-style = bold red "#4f5258"
+	plus-style = green
+	plus-emph-style = bold green "#4f5258"
+	minus-empty-line-marker-style = normal "#ffc0b9"
+	plus-empty-line-marker-style = normal "#b3f6c0"
+	line-numbers-minus-style = "#ffc0b9"
+	line-numbers-plus-style = "#b3f6c0"
+	line-numbers-zero-style = "#9b9ea4"
+	line-numbers-left-style = "#9b9ea4"
+	line-numbers-right-style = "#9b9ea4"
+	file-style = bold "#a6dbff"
+	file-decoration-style = "#a6dbff" ul
+	hunk-header-style = file line-number syntax
+	hunk-header-decoration-style = "#9b9ea4" box
+	hunk-header-file-style = "#ffcaff"
+	hunk-header-line-number-style = "#fce094"
+	commit-style = raw
+	commit-decoration-style = "#fce094" box
+	blame-palette = "#14161b #07080d"
+	map-styles = bold purple => syntax "#4f5258", bold cyan => syntax "#07080d"

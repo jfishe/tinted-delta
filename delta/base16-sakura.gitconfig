@@ -1,0 +1,33 @@
+; tinted-delta: Sakura (base16-sakura)
+; Scheme author: Misterio77 (http://github.com/Misterio77)
+; Template: https://github.com/jfishe/tinted-delta
+;
+; Include from ~/.gitconfig:  [include] path = ~/.config/delta/tinty.gitconfig
+; apply-delta.py (the tinty hook) replaces the four plus/minus styles with
+; backgrounds blended from these colors:
+; tinted-delta-vars: fg=#564448 bg=#feedf3 red=#df2d52 green=#2e916d
+[delta]
+	light = true
+	true-color = always
+	syntax-theme = base16
+	minus-style = red
+	minus-emph-style = bold red "#e0ccd1"
+	plus-style = green
+	plus-emph-style = bold green "#e0ccd1"
+	minus-empty-line-marker-style = normal "#df2d52"
+	plus-empty-line-marker-style = normal "#2e916d"
+	line-numbers-minus-style = "#df2d52"
+	line-numbers-plus-style = "#2e916d"
+	line-numbers-zero-style = "#755f64"
+	line-numbers-left-style = "#755f64"
+	line-numbers-right-style = "#755f64"
+	file-style = bold "#006e93"
+	file-decoration-style = "#006e93" ul
+	hunk-header-style = file line-number syntax
+	hunk-header-decoration-style = "#755f64" box
+	hunk-header-file-style = "#5e2180"
+	hunk-header-line-number-style = "#c29461"
+	commit-style = raw
+	commit-decoration-style = "#c29461" box
+	blame-palette = "#feedf3 #f8e2e7"
+	map-styles = bold purple => syntax "#e0ccd1", bold cyan => syntax "#f8e2e7"

@@ -1,0 +1,33 @@
+; tinted-delta: Spacemacs (base16-spacemacs)
+; Scheme author: Nasser Alshammari (https://github.com/nashamri/spacemacs-theme)
+; Template: https://github.com/jfishe/tinted-delta
+;
+; Include from ~/.gitconfig:  [include] path = ~/.config/delta/tinty.gitconfig
+; apply-delta.py (the tinty hook) replaces the four plus/minus styles with
+; backgrounds blended from these colors:
+; tinted-delta-vars: fg=#a3a3a3 bg=#1f2022 red=#f2241f green=#67b11d
+[delta]
+	dark = true
+	true-color = always
+	syntax-theme = base16
+	minus-style = red
+	minus-emph-style = bold red "#444155"
+	plus-style = green
+	plus-emph-style = bold green "#444155"
+	minus-empty-line-marker-style = normal "#f2241f"
+	plus-empty-line-marker-style = normal "#67b11d"
+	line-numbers-minus-style = "#f2241f"
+	line-numbers-plus-style = "#67b11d"
+	line-numbers-zero-style = "#585858"
+	line-numbers-left-style = "#585858"
+	line-numbers-right-style = "#585858"
+	file-style = bold "#4f97d7"
+	file-decoration-style = "#4f97d7" ul
+	hunk-header-style = file line-number syntax
+	hunk-header-decoration-style = "#585858" box
+	hunk-header-file-style = "#a31db1"
+	hunk-header-line-number-style = "#b1951d"
+	commit-style = raw
+	commit-decoration-style = "#b1951d" box
+	blame-palette = "#1f2022 #282828"
+	map-styles = bold purple => syntax "#444155", bold cyan => syntax "#282828"

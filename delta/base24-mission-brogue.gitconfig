@@ -1,0 +1,33 @@
+; tinted-delta: Mission Brogue (base24-mission-brogue)
+; Scheme author: Thomas Leon Highbaugh
+; Template: https://github.com/jfishe/tinted-delta
+;
+; Include from ~/.gitconfig:  [include] path = ~/.config/delta/tinty.gitconfig
+; apply-delta.py (the tinty hook) replaces the four plus/minus styles with
+; backgrounds blended from these colors:
+; tinted-delta-vars: fg=#93a5b4 bg=#283139 red=#efa9a9 green=#8cd4b0
+[delta]
+	dark = true
+	true-color = always
+	syntax-theme = base16
+	minus-style = red
+	minus-emph-style = bold red "#4d606f"
+	plus-style = green
+	plus-emph-style = bold green "#4d606f"
+	minus-empty-line-marker-style = normal "#efa9a9"
+	plus-empty-line-marker-style = normal "#8cd4b0"
+	line-numbers-minus-style = "#efa9a9"
+	line-numbers-plus-style = "#8cd4b0"
+	line-numbers-zero-style = "#60778a"
+	line-numbers-left-style = "#60778a"
+	line-numbers-right-style = "#60778a"
+	file-style = bold "#a2c5fd"
+	file-decoration-style = "#a2c5fd" ul
+	hunk-header-style = file line-number syntax
+	hunk-header-decoration-style = "#60778a" box
+	hunk-header-file-style = "#ccb7db"
+	hunk-header-line-number-style = "#e0b88a"
+	commit-style = raw
+	commit-decoration-style = "#e0b88a" box
+	blame-palette = "#283139 #3b4954"
+	map-styles = bold purple => syntax "#4d606f", bold cyan => syntax "#3b4954"

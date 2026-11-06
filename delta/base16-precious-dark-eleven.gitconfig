@@ -1,0 +1,33 @@
+; tinted-delta: Precious Dark Eleven (base16-precious-dark-eleven)
+; Scheme author: 4lex4 &lt;4lex49@zoho.com&gt;
+; Template: https://github.com/jfishe/tinted-delta
+;
+; Include from ~/.gitconfig:  [include] path = ~/.config/delta/tinty.gitconfig
+; apply-delta.py (the tinty hook) replaces the four plus/minus styles with
+; backgrounds blended from these colors:
+; tinted-delta-vars: fg=#b8b7b6 bg=#1c1e20 red=#ff8782 green=#95b658
+[delta]
+	dark = true
+	true-color = always
+	syntax-theme = base16
+	minus-style = red
+	minus-emph-style = bold red "#37393a"
+	plus-style = green
+	plus-emph-style = bold green "#37393a"
+	minus-empty-line-marker-style = normal "#ff8782"
+	plus-empty-line-marker-style = normal "#95b658"
+	line-numbers-minus-style = "#ff8782"
+	line-numbers-plus-style = "#95b658"
+	line-numbers-zero-style = "#858585"
+	line-numbers-left-style = "#858585"
+	line-numbers-right-style = "#858585"
+	file-style = bold "#68b0ee"
+	file-decoration-style = "#68b0ee" ul
+	hunk-header-style = file line-number syntax
+	hunk-header-decoration-style = "#858585" box
+	hunk-header-file-style = "#b799fe"
+	hunk-header-line-number-style = "#d0a543"
+	commit-style = raw
+	commit-decoration-style = "#d0a543" box
+	blame-palette = "#1c1e20 #292b2d"
+	map-styles = bold purple => syntax "#37393a", bold cyan => syntax "#292b2d"

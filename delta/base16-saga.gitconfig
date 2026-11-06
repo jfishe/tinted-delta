@@ -1,0 +1,33 @@
+; tinted-delta: SAGA (base16-saga)
+; Scheme author: https://github.com/SAGAtheme/SAGA
+; Template: https://github.com/jfishe/tinted-delta
+;
+; Include from ~/.gitconfig:  [include] path = ~/.config/delta/tinty.gitconfig
+; apply-delta.py (the tinty hook) replaces the four plus/minus styles with
+; backgrounds blended from these colors:
+; tinted-delta-vars: fg=#dce2f7 bg=#05080a red=#ffd4e9 green=#f7ddff
+[delta]
+	dark = true
+	true-color = always
+	syntax-theme = base16
+	minus-style = red
+	minus-emph-style = bold red "#0f181e"
+	plus-style = green
+	plus-emph-style = bold green "#0f181e"
+	minus-empty-line-marker-style = normal "#ffd4e9"
+	plus-empty-line-marker-style = normal "#f7ddff"
+	line-numbers-minus-style = "#ffd4e9"
+	line-numbers-plus-style = "#f7ddff"
+	line-numbers-zero-style = "#141f27"
+	line-numbers-left-style = "#141f27"
+	line-numbers-right-style = "#141f27"
+	file-style = bold "#c9fff7"
+	file-decoration-style = "#c9fff7" ul
+	hunk-header-style = file line-number syntax
+	hunk-header-decoration-style = "#141f27" box
+	hunk-header-file-style = "#dcc3f9"
+	hunk-header-line-number-style = "#fbebc8"
+	commit-style = raw
+	commit-decoration-style = "#fbebc8" box
+	blame-palette = "#05080a #0a1014"
+	map-styles = bold purple => syntax "#0f181e", bold cyan => syntax "#0a1014"

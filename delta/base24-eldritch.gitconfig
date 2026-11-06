@@ -1,0 +1,33 @@
+; tinted-delta: Eldritch (base24-eldritch)
+; Scheme author: https://github.com/eldritch-theme
+; Template: https://github.com/jfishe/tinted-delta
+;
+; Include from ~/.gitconfig:  [include] path = ~/.config/delta/tinty.gitconfig
+; apply-delta.py (the tinty hook) replaces the four plus/minus styles with
+; backgrounds blended from these colors:
+; tinted-delta-vars: fg=#ebfafa bg=#212337 red=#f16c75 green=#37f499
+[delta]
+	dark = true
+	true-color = always
+	syntax-theme = base16
+	minus-style = red
+	minus-emph-style = bold red "#3b4261"
+	plus-style = green
+	plus-emph-style = bold green "#3b4261"
+	minus-empty-line-marker-style = normal "#f16c75"
+	plus-empty-line-marker-style = normal "#37f499"
+	line-numbers-minus-style = "#f16c75"
+	line-numbers-plus-style = "#37f499"
+	line-numbers-zero-style = "#7081d0"
+	line-numbers-left-style = "#7081d0"
+	line-numbers-right-style = "#7081d0"
+	file-style = bold "#39ddfd"
+	file-decoration-style = "#39ddfd" ul
+	hunk-header-style = file line-number syntax
+	hunk-header-decoration-style = "#7081d0" box
+	hunk-header-file-style = "#a48cf2"
+	hunk-header-line-number-style = "#f1fc79"
+	commit-style = raw
+	commit-decoration-style = "#f1fc79" box
+	blame-palette = "#212337 #323449"
+	map-styles = bold purple => syntax "#3b4261", bold cyan => syntax "#323449"
