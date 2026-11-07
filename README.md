@@ -39,7 +39,7 @@ Append to `~/.config/tinted-theming/tinty/config.toml`:
 name = "tinted-delta"
 path = "https://github.com/jfishe/tinted-delta"
 themes-dir = "delta"
-hook = "python3 -I ~/.local/share/tinted-theming/tinty/repos/tinted-delta/apply-delta.py %f ~/.config/delta/tinty.gitconfig"
+hook = "python3 -I ~/.local/share/tinted-theming/tinty/repos/tinted-delta/apply-delta.py %f ~/.config/delta/tinty.gitconfig ${USERPROFILE:+\"$USERPROFILE/.config/delta/tinty.gitconfig\"}"
 supported-systems = ["base16", "base24", "tinted8"]
 ```
 
@@ -55,16 +55,16 @@ settings take precedence.
 
 ### WSL + Windows
 
-tinty runs in WSL, but Git for Windows and Windows delta read `%USERPROFILE%`.
-Give the hook a second destination:
+When `$USERPROFILE` is set, the hook also writes
+`$USERPROFILE/.config/delta/tinty.gitconfig` for Git for Windows and Windows
+delta. Elsewhere it writes only `~/.config/delta/tinty.gitconfig`.
+On WSL, the hook reads `$USERPROFILE` from the shell that runs `tinty`; see
+[tinted-dircolors](https://github.com/jfishe/tinted-dircolors#tinted-configuration)
+for passing it through `WSLENV`.
 
-```toml
-hook = "python3 -I ~/.local/share/tinted-theming/tinty/repos/tinted-delta/apply-delta.py %f ~/.config/delta/tinty.gitconfig ${USERPROFILE:+\"$USERPROFILE/.config/delta/tinty.gitconfig\"}"
-```
-
-(`$USERPROFILE` must be the WSL path to the Windows home.) Both gits expand `~`
-to their own home, so a single `path = ~/.config/delta/tinty.gitconfig`
-include works in a `.gitconfig` that both of them read.
+Both gits expand `~` to their own home, so a single
+`path = ~/.config/delta/tinty.gitconfig` include works in a `.gitconfig` that
+both of them read.
 
 ## Development
 
