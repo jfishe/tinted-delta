@@ -4,3 +4,6 @@ tags
 __pycache__/
 *.py[cod]
 .ruff_cache/
+
+# build.sh scheme cache
+.cache/

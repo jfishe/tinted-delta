@@ -5,7 +5,7 @@ on:
     - cron: "0 0 * * 0" # https://crontab.guru/every-week
   push:
     branches: [main]
-    paths: ["templates/**"]
+    paths: ["templates/**", "build.sh", "tinty.toml"]
 
 permissions: {}
 
@@ -25,15 +25,17 @@ jobs:
         with:
           persist-credentials: false
 
-      - name: "Install tinted-builder-rust"
+      # Same tinty as local builds; bump together with your local install.
+      - name: "Install tinty"
         uses: "jaxxstorm/action-install-gh-release@25e24d2d23ae098373794ef1d6faecb48ee52da8" # v3.0.0
         with:
-          repo: "tinted-theming/tinted-builder-rust"
+          repo: "tinted-theming/tinty"
+          tag: "v0.35.0"
 
+      # Upstream schemes plus the [[schemes.extras]] in tinty.toml; the same
+      # script and inputs as a local build.
       - name: "Build"
-        run: |
-          tinted-builder-rust sync
-          tinted-builder-rust build .
+        run: ./build.sh
 
       - name: "Commit the changes, if any"
         env:

@@ -68,17 +68,25 @@ both of them read.
 
 ## Development
 
-Edit `templates/` or `apply-delta.py`, then preview locally:
+Edit `templates/` or `apply-delta.py`, then build and preview locally:
 
 ```bash
-tinty build .
+./build.sh   # tinty sync + tinty build
 python3 -I apply-delta.py delta/base16-solarized-dark.gitconfig /tmp/t.gitconfig
 ```
 
+`build.sh` builds against the upstream tinted-theming schemes plus the
+`[[schemes.extras]]` in [`tinty.toml`](tinty.toml), such as
+[tinted-colortemplate](https://github.com/jfishe/tinted-colortemplate)'s
+solarized8. It uses that config and its own data dir (`.cache/tinty`), not
+your personal tinty setup. It rebuilds `delta/` from scratch, so removed
+schemes disappear. (`tinty build .` alone reads only the upstream schemes.)
+
 Commit and push `templates/` and `delta/`. The
-[update workflow](.github/workflows/update.yml) also rebuilds `delta/` on every
-push touching `templates/` and weekly against the latest upstream schemes.
-Users pick up changes with `tinty update`.
+[update workflow](.github/workflows/update.yml) runs the same `build.sh` with
+the same tinty release (pinned there; keep it in step with your local tinty).
+It runs on every push touching `templates/` or the build, and weekly against
+the latest schemes. Users pick up changes with `tinty update`.
 
 ## Credits
 

@@ -1,0 +1,8 @@
+# tinty config used only by build.sh (with its own data dir, .cache/tinty).
+# Lists the scheme repositories to build against in addition to the upstream
+# tinted-theming/schemes, which tinty always includes.
+items = []
+
+[[schemes.extras]]
+name = "tinted-colortemplate"
+path = "https://github.com/jfishe/tinted-colortemplate"
