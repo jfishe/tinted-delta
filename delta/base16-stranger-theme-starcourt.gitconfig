@@ -1,0 +1,33 @@
+; tinted-delta: Stranger Theme Starcourt (base16-stranger-theme-starcourt)
+; Scheme author: Stranger Theme (https://github.com/stranger-theme/stranger-theme)
+; Template: https://github.com/jfishe/tinted-delta
+;
+; Include from ~/.gitconfig:  [include] path = ~/.config/delta/tinty.gitconfig
+; apply-delta.py (the tinty hook) replaces the four plus/minus styles with
+; backgrounds blended from these colors:
+; tinted-delta-vars: fg=#eaeaea bg=#1a1a2e red=#ff6b6b green=#00fa9a
+[delta]
+	dark = true
+	true-color = always
+	syntax-theme = ansi
+	minus-style = red
+	minus-emph-style = bold red "#3d3d66"
+	plus-style = green
+	plus-emph-style = bold green "#3d3d66"
+	minus-empty-line-marker-style = normal "#ff6b6b"
+	plus-empty-line-marker-style = normal "#00fa9a"
+	line-numbers-minus-style = "#ff6b6b"
+	line-numbers-plus-style = "#00fa9a"
+	line-numbers-zero-style = "#8c77c3"
+	line-numbers-left-style = "#8c77c3"
+	line-numbers-right-style = "#8c77c3"
+	file-style = bold "#ba55d3"
+	file-decoration-style = "#ba55d3" ul
+	hunk-header-style = file line-number syntax
+	hunk-header-decoration-style = "#8c77c3" box
+	hunk-header-file-style = "#ff1493"
+	hunk-header-line-number-style = "#ffd700"
+	commit-style = raw
+	commit-decoration-style = "#ffd700" box
+	blame-palette = "#1a1a2e #2e2e42"
+	map-styles = bold purple => syntax "#3d3d66", bold cyan => syntax "#2e2e42"
