@@ -21,11 +21,11 @@
 	line-numbers-zero-style = "#758975"
 	line-numbers-left-style = "#758975"
 	line-numbers-right-style = "#758975"
-	file-style = bold "#b294bb"
-	file-decoration-style = "#b294bb" ul
+	file-style = bold "#81a2be"
+	file-decoration-style = "#81a2be" ul
 	hunk-header-style = file line-number syntax
 	hunk-header-decoration-style = "#758975" box
-	hunk-header-file-style = "#ff7f2a"
+	hunk-header-file-style = "#b294bb"
 	hunk-header-line-number-style = "#f0c674"
 	commit-style = raw
 	commit-decoration-style = "#f0c674" box

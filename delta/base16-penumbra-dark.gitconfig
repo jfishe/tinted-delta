@@ -1,33 +1,33 @@
 ; tinted-delta: Penumbra Dark (base16-penumbra-dark)
-; Scheme author: Zachary Weiss (https://github.com/zacharyweiss)
+; Scheme author: Neal McKee (https://github.com/nealmckee/penumbra)
 ; Template: https://github.com/jfishe/tinted-delta
 ;
 ; Include from ~/.gitconfig:  [include] path = ~/.config/delta/tinty.gitconfig
 ; apply-delta.py (the tinty hook) replaces the four plus/minus styles with
 ; backgrounds blended from these colors:
-; tinted-delta-vars: fg=#bebebe bg=#24272b red=#ca736c green=#47a477
+; tinted-delta-vars: fg=#8b8b8b bg=#2c2e31 red=#ba616a green=#4f9158
 [delta]
 	dark = true
 	true-color = always
 	syntax-theme = ansi
 	minus-style = red
-	minus-emph-style = bold red "#3e4044"
+	minus-emph-style = bold red "#484a4d"
 	plus-style = green
-	plus-emph-style = bold green "#3e4044"
-	minus-empty-line-marker-style = normal "#ca736c"
-	plus-empty-line-marker-style = normal "#47a477"
-	line-numbers-minus-style = "#ca736c"
-	line-numbers-plus-style = "#47a477"
-	line-numbers-zero-style = "#636363"
-	line-numbers-left-style = "#636363"
-	line-numbers-right-style = "#636363"
-	file-style = bold "#5794d0"
-	file-decoration-style = "#5794d0" ul
+	plus-emph-style = bold green "#484a4d"
+	minus-empty-line-marker-style = normal "#ba616a"
+	plus-empty-line-marker-style = normal "#4f9158"
+	line-numbers-minus-style = "#ba616a"
+	line-numbers-plus-style = "#4f9158"
+	line-numbers-zero-style = "#5e6063"
+	line-numbers-left-style = "#5e6063"
+	line-numbers-right-style = "#5e6063"
+	file-style = bold "#0081b4"
+	file-decoration-style = "#0081b4" ul
 	hunk-header-style = file line-number syntax
-	hunk-header-decoration-style = "#636363" box
-	hunk-header-file-style = "#9481cc"
-	hunk-header-line-number-style = "#8d9741"
+	hunk-header-decoration-style = "#5e6063" box
+	hunk-header-file-style = "#7176ae"
+	hunk-header-line-number-style = "#948a1d"
 	commit-style = raw
-	commit-decoration-style = "#8d9741" box
-	blame-palette = "#24272b #303338"
-	map-styles = bold purple => syntax "#3e4044", bold cyan => syntax "#303338"
+	commit-decoration-style = "#948a1d" box
+	blame-palette = "#2c2e31 #383a3d"
+	map-styles = bold purple => syntax "#484a4d", bold cyan => syntax "#383a3d"

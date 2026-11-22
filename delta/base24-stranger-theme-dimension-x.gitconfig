@@ -5,7 +5,7 @@
 ; Include from ~/.gitconfig:  [include] path = ~/.config/delta/tinty.gitconfig
 ; apply-delta.py (the tinty hook) replaces the four plus/minus styles with
 ; backgrounds blended from these colors:
-; tinted-delta-vars: fg=#e8d5d5 bg=#1e1a1a red=#ff55aa green=#8b7355
+; tinted-delta-vars: fg=#e8d5d5 bg=#1e1a1a red=#ff6b6b green=#8fae7e
 [delta]
 	dark = true
 	true-color = always
@@ -14,10 +14,10 @@
 	minus-emph-style = bold red "#523535"
 	plus-style = green
 	plus-emph-style = bold green "#523535"
-	minus-empty-line-marker-style = normal "#ff55aa"
-	plus-empty-line-marker-style = normal "#8b7355"
-	line-numbers-minus-style = "#ff55aa"
-	line-numbers-plus-style = "#8b7355"
+	minus-empty-line-marker-style = normal "#ff6b6b"
+	plus-empty-line-marker-style = normal "#8fae7e"
+	line-numbers-minus-style = "#ff6b6b"
+	line-numbers-plus-style = "#8fae7e"
 	line-numbers-zero-style = "#9a7c7c"
 	line-numbers-left-style = "#9a7c7c"
 	line-numbers-right-style = "#9a7c7c"
@@ -25,9 +25,9 @@
 	file-decoration-style = "#c678dd" ul
 	hunk-header-style = file line-number syntax
 	hunk-header-decoration-style = "#9a7c7c" box
-	hunk-header-file-style = "#e06c75"
-	hunk-header-line-number-style = "#bca89f"
+	hunk-header-file-style = "#ff55aa"
+	hunk-header-line-number-style = "#d19a66"
 	commit-style = raw
-	commit-decoration-style = "#bca89f" box
+	commit-decoration-style = "#d19a66" box
 	blame-palette = "#1e1a1a #322e2e"
 	map-styles = bold purple => syntax "#523535", bold cyan => syntax "#322e2e"
